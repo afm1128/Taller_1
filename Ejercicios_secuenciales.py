@@ -63,3 +63,72 @@ print(f'el valor de la cuota inicial es: {v_ctainicial: ,}')
 print(f'el valor de la cuotas mensuales es: {v_ctamensual: ,}')
 
 
+# Una empresa le hace los siguientes descuentos sobre el sueldo base
+# a sus trabajadores: 1% por ley de politica pública, 4% por seguro
+# social, 0.5% por seguro forzoso y 5% por caja de ahorro. Realice un
+# programa en Java que determine el monto de cada descuento y el
+# monto total a pagar al trabajador.
+
+sueldo = int(input("Ingrese el sueldo base del trabajador: $"))
+
+descuento_ley = sueldo *0.01
+descuento_seguro_social = sueldo * 0.04
+descuento_seguro_forzoso = sueldo * 0.005
+descuento_caja = sueldo * 0.05
+
+print(f"Descuento de politica publica: ${descuento_ley: ,}")
+print(f"Descuento de seguro social: ${descuento_seguro_social: ,}")
+print(f"Descuento de seguro forzoso: ${descuento_seguro_forzoso: ,}")
+print(f"Descuento por caja de ahorro: ${descuento_caja: ,}")
+sueldo_total = sueldo - (descuento_ley + descuento_seguro_social + descuento_seguro_forzoso + descuento_caja)
+
+print(f"El monto toal a pagar es: ${sueldo_total: ,}")
+
+# El periódico el Informador cobra por un aviso clasificado un monto
+# que depende del número de palabras, tamaño en cetímetros y
+# número de colores. Cada palabra tiene un costo de $20.000, cada
+# centímetro tiene un costo de $15.000 y cada color tiene un costo de
+# $25.000. Realice un algoritmo que determine el monto a pagar por un
+# aviso clasificado.
+print("Datos para un aviso clasificado")
+
+palabras = int(input("Ingresar el numero de palabras: "))
+tamaño = int(input("Ingresa el tamaño(cm): "))
+colores = int(input("Ingresa el numero de colores: "))
+
+v_palabras = palabras * 20000
+v_tamaño = tamaño * 15000
+v_colores = colores * 25000
+
+t_pagar = v_palabras + v_tamaño + v_colores
+
+print(f"El monto a pagar por un aviso clasificado es: ${t_pagar: ,}")
+
+# Una empresa paga a sus empleados un bono por antigüedad que
+# consiste en $100.000 por el primer año laboral y $120.000 por cada
+# año siguiente. Realice un programa en Java que determine el monto
+# del bono a pagar a un trabajador que tiene varios años en la empresa.
+
+años = int(input("Ingrese la cantidad de años laborales: "))
+bprimer_año = 100000
+b_años = (años - 1) * 120000
+
+t_bono = bprimer_año + b_años
+print(f"El bono a pagar al trabajador es: ${t_bono: ,}")
+
+# Una Universidad le paga a sus profesores $20.000 la hora y le hace
+# un descuento del 5% por concepto de caja de ahorro. Determine el
+# monto del descuento y el monto total a pagar al profesor.
+
+horas = int(input("Ingrese la cantidad de horas: "))
+
+descuento = (horas*20000) * 0.05
+t_horas = (horas * 20000) - descuento
+print(f"Descuento por concepto de caja de ahorro: ${descuento}")
+
+print(f"El monto total a pagar es: ${t_horas: ,}")
+
+# Un centro de comunicaciones alquilan tarjetas para realizar llamadas
+# y cobran el monto consumido de la tarjeta mas un recargo del 20%.
+# Teniendo como dato de entrada el monto inicial y el monto final de la
+# tarjeta, determine el costo de la llamada.
