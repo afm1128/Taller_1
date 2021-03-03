@@ -38,11 +38,63 @@ else:
 v_monto = int(input('digite el monto por el cual se efectua la finanza: $'))
 if v_monto >= 50000:
     v_cuota1 = v_monto * 0.02
-    print(f'en valor de la cuota del cliente es: ${v_cuota1: ,} ')
+    print(f'el valor de la cuota del cliente es: ${v_cuota1: ,} ')
 else:
     v_cuota2 = v_monto * 0.03
-    print(f'en valor de la cuota del cliente es: ${v_cuota2: ,} ')
+    print(f'el valor de la cuota del cliente es: ${v_cuota2: ,} ')
 
 
+# Una fábrica ha sido sometida a un programa de control de
+# contaminación para lo cual se efectúa una revisión de los puntos de
+# contaminación generados por la fábrica. El programa de control de
+# contaminación consiste en medir los puntos que emite la fábrica en
+# cinco días de una semana y si el promedio es superior a los 170
+# puntos entonces tendrá la sanción de parar su producción por una
+# semana y una multa del 50% de las ganancias diarias cuando no se
+# detiene la producción. Si el promedio obtenido de puntos es de 170 o
+# menos entonces no tendrá ni sanción ni multa. El dueño de la fábrica
+# desea saber cuanto dinero perderá después de ser sometido a la
+# revisión.
+p_dia1 = int(input('digite los puntos dia 1: '))
+p_dia2 = int(input('digite los puntos dia 2: '))
+p_dia3 = int(input('digite los puntos dia 3: '))
+p_dia4 = int(input('digite los puntos dia 4: '))
+p_dia5 = int(input('digite los puntos dia 5: '))
 
-# 
+g_dia1 = int(input('digite las ganancias dia 1: '))
+g_dia2 = int(input('digite las ganancias dia 2: '))
+g_dia3 = int(input('digite las ganancias dia 3: '))
+g_dia4 = int(input('digite las ganancias dia 4: '))
+g_dia5 = int(input('digite las ganancias dia 5: '))
+
+prom_puntos = (p_dia1 + p_dia2 + p_dia3 + p_dia4 + p_dia5) / 5
+s_ganancias = g_dia1 + g_dia2 + g_dia3 + g_dia4 + g_dia5
+if prom_puntos > 170:
+    v_pagar = s_ganancias * 0.5
+    print(f'el valor a pagar por la sancion es: ${v_pagar: ,} ')
+else:
+    
+    print(f'como el promedio de puntos es menor a 170 no tendra ninguna sancion')
+    
+    
+# Una persona se encuentra con un problema de comprar un automóvil
+# o un terreno, los cuales cuestan exactamente lo mismo. Sabe que
+# mientras el automóvil se devalúa, con el terreno sucede lo contrario.
+# Esta persona comprará el automóvil si al cabo de tres años la
+# devaluación de este no es mayor que la mitad del incremento del
+
+v_carro = int(input('digite el valor del carro: $'))
+v_terreno = int(input('digite el valor del terreno: $'))
+p_devaluacion = int(input('digite el porcentaje de devaluacion anual: '))
+p_incremento = int(input('digite el porcentaje de incremento anual: '))
+devaluacion = v_carro * ((p_devaluacion * 3) / 100)
+incremento = v_terreno * ((p_incremento * 3) / 100)
+
+if devaluacion > incremento / 2:
+   
+    print(f'la persona debe comprar la casa ')
+else:
+    
+    print(f'la persona debe comprar el carro')
+
+
