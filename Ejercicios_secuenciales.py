@@ -71,7 +71,7 @@ print(f'el valor de la cuotas mensuales es: {v_ctamensual: ,}')
 
 sueldo = int(input("Ingrese el sueldo base del trabajador: $"))
 
-descuento_ley = sueldo *0.01
+descuento_ley = sueldo * 0.01
 descuento_seguro_social = sueldo * 0.04
 descuento_seguro_forzoso = sueldo * 0.005
 descuento_caja = sueldo * 0.05
@@ -132,3 +132,105 @@ print(f"El monto total a pagar es: ${t_horas: ,}")
 # y cobran el monto consumido de la tarjeta mas un recargo del 20%.
 # Teniendo como dato de entrada el monto inicial y el monto final de la
 # tarjeta, determine el costo de la llamada.
+
+m_inicial = int(input("Ingrese el monto inicial de la tarjeta: $"))
+m_final = int(input("Ingrese el monto final de la tarjeta: $"))
+
+recargo = (m_inicial - m_final) * 0.20
+
+t_llamada = (m_inicial - m_final) - recargo
+
+print(f"El costo de la llamada es: ${t_llamada: ,}")
+
+
+
+# En una fototienda cobran por el revelado de un rollo $1.500 por cada
+# foto. Realice un programa en Java que determine el monto a pagar
+# por un revelado completo sabiendo que adiconalmente le cobran el
+# IVA (16%).
+
+
+n_fotos = int(input('diga el numero de fotos a revelar: '))
+
+v_revelado = n_fotos * 1500
+
+t_pagar = v_revelado + (v_revelado * 0.16)
+
+print(f"el valor a pagar es: ${t_pagar: ,}")
+
+
+
+
+# En un hospital existen tres áreas: Ginecología, Pediatría y
+# Traumatología. El presupuesto anual del hospital se reparte
+# conforme a la siguiente tabla:
+    
+    
+v_presupuesto = int(input('diga cuanto es el presipuesto anual: $'))
+
+gineco = v_presupuesto * 0.40
+trauma = v_presupuesto * 0.30
+pediatria = v_presupuesto * 0.30
+
+print(f"ginecologia recibe: ${gineco: ,} del presupuesto")
+print(f"pediatria recibe: ${pediatria: ,} del presupuesto")
+print(f"traumatologia recibe: ${trauma: ,} del presupuesto")
+
+
+# Una video tienda alquila DVD a $1.500 el día. Tiene una promoción
+# que consiste en dejar gratis el alquiler de una película. Realice un
+# programa en Java que teniendo como dato de entrada el total de
+# películas alquiladas, y el número de días de alquiler, determine el
+# monto a pagar.
+
+n_dvd = int(input("diga el numero de dvds alquilar: "))
+n_dias = int(input("diga el numero de dias que tendra el dvd: "))
+
+descuento = n_dvd - 1
+t_pagar = descuento * (n_dias * 1500)
+print(f"total a pagar es : ${t_pagar: ,}")
+
+# Una Agencia de viajes cobra por un Tour a Cartagena $25.000
+# diarios por persona. Realice un programa en Java que determine el
+# monto a pagar por una familia que desee realizar dicho Tour
+# sabiendo que también cobran el 12% de IVA.
+
+n_personas = int(input("diga el numero de personas que va al tour: "))
+n_dias = int(input("diga el numero de dias que ira al tour: "))
+
+t_tour = n_personas * n_dias * 25000
+t_pagar = t_tour + (t_tour * 0.12)
+print(f"total a pagar es : ${t_pagar: ,}")
+
+
+# Un Hotel 5 Estrellas de Santa Marta tiene una promoción para sus
+# clientes. Cobra por una habitación $100.000 el primer día y por el
+# resto $200.000 por día. Realice un programa en Java que determine
+# el valor total a pagar por la habitación si la estadía fue de varios
+# días.
+
+n_dias = int(input("diga el numero de dias que tendra la habitacion: "))
+
+p_dia = 100000
+r_dias = (n_dias - 1) * 200000
+t_pagar = p_dia + r_dias
+print(f"total a pagar es : ${t_pagar: ,}")
+
+# El banco del Pueblo da microcréditos a empresarios para ser
+# cancelados en un lapso de 2 años (24 meses). Al monto del
+# préstamo se le cobra un interés del 24%. El empresario debe pagar
+# la mitad del préstamo en 4 cuotas especiales y la otra mitad en 20
+# cuotas ordinarias. Realice un algoritmo que teniendo como dato de
+# entrada el monto del préstamo, determine el monto total a pagar por
+# el préstamo, el monto de las cuotas especiales y el monto de las
+# cuotas ordinarias.
+
+
+m_credito = int(input("diga el monto del credito: $"))
+intereses = m_credito * 0.24
+t_pagar = m_credito + intereses
+c_especiales = (t_pagar * 0.5) / 4
+c_ordinaria = (t_pagar * 0.5) / 20
+print(f"total a pagar por cuotas especiales es : ${c_especiales: ,}")
+print(f"total a pagar por cuotas ordinarias es : ${c_ordinaria: ,}")
+
